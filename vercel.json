@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "traceable-ai-compliance-agent",
+  "builds": [
+    { "src": "frontend/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/static/(.*)", "headers": { "cache-control": "public, max-age=0, must-revalidate" }, "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "/index.html" },
+
+    /* Proxy API calls to an external backend. Replace the destination with your API URL. */
+    { "src": "/api/(.*)", "dest": "https://YOUR_BACKEND_URL/api/$1" }
+  ]
+}
