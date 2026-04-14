@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Traceable AI Compliance Agent</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="card">
+      <h1>Traceable AI Compliance Agent</h1>
+      <form id="requestForm">
+        <label>Applicant Name<input id="name" value="Alice"></label>
+        <label>Credit Score<input id="score" type="number" value="720"></label>
+        <button type="submit" class="btn">Decide</button>
+      </form>
+      <section id="result" class="result hidden">
+        <h2 id="status"></h2>
+        <pre id="decision"></pre>
+        <div id="evidence" class="evidence"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

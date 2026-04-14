@@ -1,0 +1,16 @@
+[
+  {
+    "id": "reg-001",
+    "title": "Fair Lending - Section 12",
+    "text": "Section 12: Lenders shall not discriminate on the basis of race, gender, or age. All applicants must be evaluated solely on creditworthiness and objective criteria.",
+    "source": "regulations.pdf",
+    "page": 12
+  },
+  {
+    "id": "reg-002",
+    "title": "Income Verification - Section 34",
+    "text": "Section 34: Income verification requirements for loan underwriting include pay stubs, bank statements, and tax returns when applicable.",
+    "source": "manual.pdf",
+    "page": 34
+  }
+]

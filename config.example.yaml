@@ -1,0 +1,22 @@
+# Example config for Traceable AI Compliance Agent
+storage:
+  # Options: faiss (default), sqlite, local
+  vector_store: sqlite
+  # For FAISS use an index path; for SQLite, provide `sqlite_db` path
+  index_path: ./data/faiss_index
+  sqlite_db: ./data/vectors.db
+llm:
+  # Set provider to 'openai' or 'gemini' (see README for Gemini HTTP wrapper)
+  provider: openai
+  model: gpt-4
+  api_key: "YOUR_API_KEY"
+  # optional embedding model name (for OpenAI)
+  embedding_model: text-embedding-3-small
+retrieval:
+  top_k: 5
+
+# Gemini HTTP wrapper (optional): set these env vars and implement a small
+# internal wrapper that accepts POST {"inputs": [..]} and returns
+# {"embeddings": [[...],[...]]}. Example:
+# GEMINI_EMBEDDING_URL=https://internal-host/gemini/embed
+# GEMINI_API_KEY=...

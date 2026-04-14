@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY
+      - PINECONE_API_KEY
+      - PINECONE_ENV
+      - PINECONE_INDEX
+    volumes:
+      - ./data:/app/data
+      - ./config.example.yaml:/app/config.example.yaml:ro
+    restart: unless-stopped
