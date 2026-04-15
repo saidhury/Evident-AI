@@ -18,6 +18,50 @@ PYTHONPATH=src uvicorn traceable_ai_compliance_agent.api:app --reload --host 0.0
 
 5. Open `http://127.0.0.1:8000/` to view the frontend.
 
+Vercel Deployment (FastAPI + frontend together)
+- The project is configured to deploy as a Python serverless app via `api/index.py` and `vercel.json`.
+- Before deploy, verify `requirements.txt` is up to date and includes all runtime dependencies.
+- Deploy from project root:
+
+```bash
+npm i -g vercel
+vercel --prod
+```
+
+- The deployed app serves:
+	- frontend at `/`
+	- static assets at `/static/*`
+	- API at `/api/*`
+- For demo deployments on serverless environments, enable temporary in-memory persistence:
+
+```bash
+DEMO_MEMORY_FALLBACK=1
+```
+
+- In this mode, review queue and audit events are stored in process memory only (not persisted across cold starts).
+
+- If you redeploy from Vercel dashboard, set project root to this repository root and keep `vercel.json` enabled.
+
+Windows one-command runner
+- From PowerShell at project root, run:
+
+```powershell
+./run_all.ps1
+```
+
+- This script will:
+	- create `.venv` if missing,
+	- install dependencies,
+	- ingest sample docs,
+	- run `pytest` smoke/API tests and `tools/run_e2e_smoke.py`,
+	- start the API server (which serves the frontend at `/`).
+
+- Optional flags:
+	- `./run_all.ps1 -NoStart` (run setup + tests only)
+	- `./run_all.ps1 -SkipTests`
+	- `./run_all.ps1 -SkipInstall`
+	- `./run_all.ps1 -Port 8010`
+
 Switching embedding provider to Gemini (example)
 - Implement a small internal HTTP wrapper that calls Google Gemini / Vertex AI with your org credentials
 - Set these environment variables (or put them in `.env`):

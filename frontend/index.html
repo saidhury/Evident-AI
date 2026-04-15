@@ -4,22 +4,155 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Traceable AI Compliance Agent</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
   </head>
   <body>
-    <main class="card">
-      <h1>Traceable AI Compliance Agent</h1>
-      <form id="requestForm">
-        <label>Applicant Name<input id="name" value="Alice"></label>
-        <label>Credit Score<input id="score" type="number" value="720"></label>
-        <button type="submit" class="btn">Decide</button>
-      </form>
-      <section id="result" class="result hidden">
-        <h2 id="status"></h2>
-        <pre id="decision"></pre>
-        <div id="evidence" class="evidence"></div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <main class="app-shell">
+      <header class="topbar panel">
+        <div>
+          <p class="eyebrow">Traceable Decisioning Platform</p>
+          <h1>AI Compliance Command Center</h1>
+          <p class="subtitle">End-to-end underwriting theater with live integrations where available and deterministic placeholders where needed.</p>
+        </div>
+        <div class="mode-wrap">
+          <span id="modePill" class="mode-pill">Initializing</span>
+        </div>
+      </header>
+
+      <section class="kpis">
+        <article class="panel kpi">
+          <p>Evidence Quality</p>
+          <h3 id="kpiEvidence">0.00</h3>
+        </article>
+        <article class="panel kpi">
+          <p>Refusal Rate</p>
+          <h3 id="kpiRefusals">0%</h3>
+        </article>
+        <article class="panel kpi">
+          <p>Open Review Cases</p>
+          <h3 id="kpiOpenQueue">0</h3>
+        </article>
+        <article class="panel kpi">
+          <p>Flow Mode</p>
+          <h3 id="kpiMode">Demo</h3>
+        </article>
+      </section>
+
+      <section class="layout">
+        <div class="col-left">
+          <article class="panel">
+            <div class="section-head">
+              <h2>Decision Simulation</h2>
+              <span class="chip">Integrated</span>
+            </div>
+            <form id="requestForm" class="decision-form">
+              <label>
+                Applicant Name
+                <input id="name" value="Alice Carter" placeholder="Enter applicant name">
+              </label>
+              <label>
+                Credit Score
+                <input id="score" type="number" min="0" max="900" value="720" placeholder="300 - 850">
+              </label>
+              <label>
+                Debt to Income Ratio
+                <input id="dti" type="number" min="0" max="1" step="0.01" value="0.31" placeholder="0.00 - 1.00">
+              </label>
+              <label>
+                Annual Income (USD)
+                <input id="income" type="number" min="0" step="1000" value="98000" placeholder="e.g. 90000">
+              </label>
+              <label>
+                Loan Amount (USD)
+                <input id="loanAmount" type="number" min="0" step="1000" value="240000" placeholder="e.g. 250000">
+              </label>
+              <label>
+                State
+                <input id="state" value="NY" placeholder="e.g. NY">
+              </label>
+              <button type="submit" class="btn">Run Decision</button>
+            </form>
+          </article>
+
+          <article id="result" class="panel result hidden">
+            <div class="section-head">
+              <h2>Decision Output</h2>
+              <h3 id="status" class="status status-processing"></h3>
+            </div>
+            <pre id="decision"></pre>
+            <div id="insights" class="insights hidden"></div>
+            <div id="policyChecks" class="stack"></div>
+            <div id="evidence" class="evidence"></div>
+            <div id="timeline" class="timeline"></div>
+          </article>
+
+          <article id="reviewPanel" class="panel review-panel">
+            <div class="section-head">
+              <h2>Human Review Queue</h2>
+              <span class="chip">Integrated</span>
+            </div>
+            <div class="review-controls">
+              <label>
+                Role
+                <select id="roleSelect">
+                  <option value="analyst">analyst</option>
+                  <option value="reviewer" selected>reviewer</option>
+                  <option value="admin">admin</option>
+                </select>
+              </label>
+              <label>
+                Reviewer ID
+                <input id="reviewerId" placeholder="Reviewer ID" value="reviewer-01" />
+              </label>
+              <button id="refreshQueueBtn" class="btn ghost" type="button">Refresh Queue</button>
+              <button id="exportQueueBtn" class="btn ghost" type="button">Export Queue JSON</button>
+            </div>
+            <div id="reviewError" class="review-error hidden"></div>
+            <div id="reviewQueue" class="review-queue"></div>
+          </article>
+        </div>
+
+        <aside class="col-right">
+          <article class="panel">
+            <div class="section-head">
+              <h2>Consumer Portfolio</h2>
+              <span class="chip">Demo Data</span>
+            </div>
+            <label>
+              Search consumers
+              <input id="consumerSearch" placeholder="Search by name, segment, or state" />
+            </label>
+            <div id="consumerList" class="consumer-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <h2>Policy Freshness Alerts</h2>
+              <span class="chip placeholder">Placeholder</span>
+            </div>
+            <ul id="policyAlerts" class="mini-list"></ul>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <h2>Integration Health</h2>
+              <span class="chip">Hybrid</span>
+            </div>
+            <ul id="integrationsList" class="mini-list"></ul>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <h2>Fairness Snapshot</h2>
+              <span class="chip placeholder">Placeholder</span>
+            </div>
+            <div id="fairnessTable" class="fairness-table"></div>
+          </article>
+        </aside>
       </section>
     </main>
-    <script src="/app.js"></script>
+    <script src="/static/app.js"></script>
   </body>
 </html>

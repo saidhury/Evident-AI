@@ -1,0 +1,15 @@
+.venv
+
+# Local-only LLM/context docs (do not publish to GitHub)
+docs/context/
+CONTEXT_MANAGER.md
+LLM_FEATURE_REFERENCE.md
+CONTEXT_FOR_NEXT_MODEL.md
+
+# Python cache artifacts
+__pycache__/
+*.pyc
+
+# Local runtime data artifacts
+data/audit_log.jsonl
+data/review_queue.json

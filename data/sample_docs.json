@@ -12,5 +12,131 @@
     "text": "Section 34: Income verification requirements for loan underwriting include pay stubs, bank statements, and tax returns when applicable.",
     "source": "manual.pdf",
     "page": 34
+  },
+  {
+    "id": "reg-003",
+    "title": "Debt-to-Income Threshold Guidance",
+    "text": "For conventional consumer lending, debt-to-income should generally remain at or below 0.45 unless a documented compensating factor is present and approved by senior underwriting.",
+    "source": "underwriting_policy_2026.pdf",
+    "page": 19
+  },
+  {
+    "id": "reg-004",
+    "title": "Credit Score Minimums",
+    "text": "Applicants below credit score 600 require adverse decision or manual review with documented exception criteria and compliance sign-off.",
+    "source": "underwriting_policy_2026.pdf",
+    "page": 21
+  },
+  {
+    "id": "reg-005",
+    "title": "Adverse Action Notice Timing",
+    "text": "Adverse action notices must be generated within regulatory response windows and include principal reasons for denial when credit is declined.",
+    "source": "consumer_protection_handbook.pdf",
+    "page": 7
+  },
+  {
+    "id": "reg-006",
+    "title": "Automated Decision Oversight",
+    "text": "Automated underwriting outputs with low evidence confidence must be flagged for human review before final customer communication.",
+    "source": "ai_governance_framework.pdf",
+    "page": 14
+  },
+  {
+    "id": "reg-007",
+    "title": "Evidence Traceability Standard",
+    "text": "Each model decision must store references to policy passages and confidence scores to enable independent audit reproducibility.",
+    "source": "audit_controls_v3.pdf",
+    "page": 5
+  },
+  {
+    "id": "reg-008",
+    "title": "Manual Review Escalation",
+    "text": "Escalate to reviewer queue when policy checks conflict or when citation quality falls below configured threshold values.",
+    "source": "review_workflow_sop.pdf",
+    "page": 11
+  },
+  {
+    "id": "reg-009",
+    "title": "Income Stability Assessment",
+    "text": "Income should be considered stable when verified history supports continuity over at least 24 months or equivalent contractual certainty.",
+    "source": "income_validation_guide.pdf",
+    "page": 15
+  },
+  {
+    "id": "reg-010",
+    "title": "Loan-to-Income Risk Signal",
+    "text": "Applications with elevated loan-to-income ratio should trigger secondary scrutiny and require stronger supporting documentation.",
+    "source": "risk_signal_catalog.pdf",
+    "page": 9
+  },
+  {
+    "id": "reg-011",
+    "title": "Policy Version Governance",
+    "text": "Every decision artifact must include the active policy version and configuration fingerprint used at decision time.",
+    "source": "model_governance_playbook.pdf",
+    "page": 3
+  },
+  {
+    "id": "reg-012",
+    "title": "Reviewer Override Controls",
+    "text": "Only authorized reviewer and admin roles may approve overrides on refused decisions, and all actions must be logged.",
+    "source": "rbac_controls_standard.pdf",
+    "page": 17
+  },
+  {
+    "id": "reg-013",
+    "title": "PII Logging Minimization",
+    "text": "Personally identifiable fields in requests must be masked prior to persistence in diagnostic or audit systems.",
+    "source": "privacy_controls_guide.pdf",
+    "page": 13
+  },
+  {
+    "id": "reg-014",
+    "title": "State Overlay Policy - New York",
+    "text": "New York product overlays require additional reviewer notes for high-risk profile declines and exception handling.",
+    "source": "state_overlay_ny.pdf",
+    "page": 6
+  },
+  {
+    "id": "reg-015",
+    "title": "State Overlay Policy - California",
+    "text": "California applications require verified disclosure readiness checks before final adverse action communication.",
+    "source": "state_overlay_ca.pdf",
+    "page": 8
+  },
+  {
+    "id": "reg-016",
+    "title": "Counterfactual Explanation Guidance",
+    "text": "When feasible, systems should provide actionable threshold guidance indicating what applicant factors would satisfy policy constraints.",
+    "source": "explainability_principles.pdf",
+    "page": 10
+  },
+  {
+    "id": "reg-017",
+    "title": "Evidence Freshness Policy",
+    "text": "Policy documents older than approved freshness windows should trigger stale-citation alerts in reviewer-facing interfaces.",
+    "source": "document_freshness_standard.pdf",
+    "page": 4
+  },
+  {
+    "id": "reg-018",
+    "title": "Operational Resilience for LOS Integrations",
+    "text": "LOS and CRM integration failures must not block reviewer access to queued decisions, and degraded mode should remain available.",
+    "source": "integration_resilience_sop.pdf",
+    "page": 12
+  },
+  {
+    "id": "reg-019",
+    "title": "Queue Export Compliance",
+    "text": "Reviewer queue exports must preserve ticket identifiers, decision reasons, actions, and timestamps for audit traceability.",
+    "source": "case_export_standard.pdf",
+    "page": 18
+  },
+  {
+    "id": "reg-020",
+    "title": "Risk Tier Prioritization",
+    "text": "Open review tickets should be prioritized by potential consumer impact, policy severity, and unresolved compliance indicators.",
+    "source": "review_prioritization_model.pdf",
+    "page": 22
   }
 ]

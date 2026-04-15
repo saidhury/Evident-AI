@@ -14,6 +14,19 @@ llm:
   embedding_model: text-embedding-3-small
 retrieval:
   top_k: 5
+  # Refuse if mean evidence score is below this value
+  min_evidence_score: 0.2
+
+policy:
+  # Policy config version used for audit traceability
+  version: "2026-04-15"
+  min_credit_score: 600
+  max_debt_to_income: 0.45
+
+deployment:
+  # Demo/serverless safety: when true, review queue and audit log use temporary in-memory storage.
+  # Runtime override is controlled via env var `DEMO_MEMORY_FALLBACK` (1|true|yes|on).
+  demo_memory_fallback: false
 
 # Gemini HTTP wrapper (optional): set these env vars and implement a small
 # internal wrapper that accepts POST {"inputs": [..]} and returns

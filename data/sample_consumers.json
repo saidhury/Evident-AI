@@ -1,0 +1,122 @@
+[
+  {
+    "id": "C-1001",
+    "name": "Alice Carter",
+    "credit_score": 720,
+    "debt_to_income": 0.31,
+    "annual_income": 98000,
+    "loan_amount": 240000,
+    "state": "NY",
+    "segment": "Prime"
+  },
+  {
+    "id": "C-1002",
+    "name": "Brian Hughes",
+    "credit_score": 658,
+    "debt_to_income": 0.43,
+    "annual_income": 86000,
+    "loan_amount": 220000,
+    "state": "TX",
+    "segment": "Near Prime"
+  },
+  {
+    "id": "C-1003",
+    "name": "Carla Mendes",
+    "credit_score": 590,
+    "debt_to_income": 0.47,
+    "annual_income": 64000,
+    "loan_amount": 205000,
+    "state": "FL",
+    "segment": "Rebuild"
+  },
+  {
+    "id": "C-1004",
+    "name": "Dev Patel",
+    "credit_score": 781,
+    "debt_to_income": 0.22,
+    "annual_income": 130000,
+    "loan_amount": 340000,
+    "state": "CA",
+    "segment": "Prime Plus"
+  },
+  {
+    "id": "C-1005",
+    "name": "Evelyn Ross",
+    "credit_score": 611,
+    "debt_to_income": 0.39,
+    "annual_income": 71000,
+    "loan_amount": 180000,
+    "state": "OH",
+    "segment": "Near Prime"
+  },
+  {
+    "id": "C-1006",
+    "name": "Farah Khan",
+    "credit_score": 735,
+    "debt_to_income": 0.29,
+    "annual_income": 112000,
+    "loan_amount": 310000,
+    "state": "IL",
+    "segment": "Prime"
+  },
+  {
+    "id": "C-1007",
+    "name": "George Whitman",
+    "credit_score": 548,
+    "debt_to_income": 0.56,
+    "annual_income": 58000,
+    "loan_amount": 165000,
+    "state": "GA",
+    "segment": "High Risk"
+  },
+  {
+    "id": "C-1008",
+    "name": "Hana Suzuki",
+    "credit_score": 694,
+    "debt_to_income": 0.35,
+    "annual_income": 102000,
+    "loan_amount": 265000,
+    "state": "WA",
+    "segment": "Prime"
+  },
+  {
+    "id": "C-1009",
+    "name": "Isaac Green",
+    "credit_score": 603,
+    "debt_to_income": 0.44,
+    "annual_income": 76000,
+    "loan_amount": 215000,
+    "state": "NC",
+    "segment": "Near Prime"
+  },
+  {
+    "id": "C-1010",
+    "name": "Julia Moreau",
+    "credit_score": 749,
+    "debt_to_income": 0.26,
+    "annual_income": 124000,
+    "loan_amount": 355000,
+    "state": "MA",
+    "segment": "Prime Plus"
+  },
+  {
+    "id": "C-1011",
+    "name": "Kenny Ortiz",
+    "credit_score": 572,
+    "debt_to_income": 0.49,
+    "annual_income": 61000,
+    "loan_amount": 175000,
+    "state": "AZ",
+    "segment": "Rebuild"
+  },
+  {
+    "id": "C-1012",
+    "name": "Lena Volkova",
+    "credit_score": 689,
+    "debt_to_income": 0.33,
+    "annual_income": 91000,
+    "loan_amount": 248000,
+    "state": "CO",
+    "segment": "Prime"
+  }
+]
